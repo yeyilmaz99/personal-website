@@ -1,0 +1,21 @@
+
+name: PHP Composer
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    name: Build And Deploy v2
+    steps:
+      - name: Copy file via scp
+        uses: appleboy/scp-action@master
+        env:
+          HOST: ${{ secrets.SSH_HOST }}
+          USERNAME: ${{ secrets.SSH_USER }}
+          PORT: ${{ secrets.SSH_PORT }}
+          KEY: ${{ secrets.SSH_KEY }}
+        with:
+          source: "."
+          target: "/var/www/yeyilmaz.tk/public"
