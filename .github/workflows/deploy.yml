@@ -19,3 +19,4 @@ jobs:
         with:
           source: "."
           target: "/var/www/yeyilmaz.tk/public"
+          
