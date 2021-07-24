@@ -687,6 +687,10 @@ p
 
 @media (max-width: 992px)
 {
+    .toggle 
+    {
+        display: none !important;
+    }
     .navigation .langdiv
     {
         margin-top: 35px;
@@ -697,10 +701,12 @@ p
     }
     .navigation
     {
+        display: none !important;
         left: -100%;
     }
     .navigation.active
     {
+        display: none !important;
         left: 0;
         width: 100%;
     }
