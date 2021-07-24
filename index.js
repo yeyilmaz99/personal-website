@@ -26,5 +26,8 @@ themeSwitch.onclick = function () {
 
 //function for fixing menu active class issue
 function toggleMenu() {  
-    return false;
+    let navigation = document.querySelector('.navigation');
+    let main = document.querySelector('.main');
+    navigation.classList.remove('active');
+    main.classList.remove('active');
 }
